@@ -1,0 +1,12 @@
+name = "color-area"
+main = "worker.js"
+compatibility_date = "2022-01-17"
+compatibility_flags = ["nodejs_compat"]
+
+[[kv_namespaces]]
+binding = "PUBLIC_ASSETS"  # 与代码中访问的变量名一致
+id = "xxxxx"  # 替换为你的KV命名空间ID
+[[d1_databases]]
+binding = "DB"  # 与代码中访问的变量名一致
+database_name = "color-db"
+database_id = "xxxxx"  # 替换为你的D1数据库ID

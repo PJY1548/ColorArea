@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNzU4NDQ1ODI1NTUwIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjU0MDM5IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiPjxwYXRoIGQ9Ik00OCA4NzMuNmE0NjQgMTIxLjYgMCAxIDAgOTI4IDAgNDY0IDEyMS42IDAgMSAwLTkyOCAwWiIgZmlsbD0iI0RBRTlGRiIgcC1pZD0iNTQwNDAiPjwvcGF0aD48cGF0aCBkPSJNNzg0IDg1My42SDI0MGMtNTIuOCAwLTk2LTQzLjItOTYtOTZWMjEyLjhjMC01Mi44IDQzLjItOTYgOTYtOTZoNTQ0YzUyLjggMCA5NiA0My4yIDk2IDk2djU0NC44YzAgNTIuOC00My4yIDk2LTk2IDk2eiIgZmlsbD0iIzFEODVEQiIgcC1pZD0iNTQwNDEiPjwvcGF0aD48cGF0aCBkPSJNNzg0IDgyMC44SDI0MGMtNTIuOCAwLTk2LTQzLjItOTYtOTZWMTM0LjRjMC01Mi44IDQzLjItOTYgOTYtOTZoNTQ0YzUyLjggMCA5NiA0My4yIDk2IDk2djU4OS42YzAgNTMuNi00My4yIDk2LjgtOTYgOTYuOHoiIGZpbGw9IiM0NTlERjUiIHAtaWQ9IjU0MDQyIj48L3BhdGg+PHBhdGggZD0iTTc1MiAyNzJINDUyYy0xNi44IDAtMzAuNC0xMy42LTMwLjQtMzAuNHYtMjhjMC0xNi44IDEzLjYtMzAuNCAzMC40LTMwLjRINzUyYzE2LjggMCAzMC40IDEzLjYgMzAuNCAzMC40djI4Qzc4MS42IDI1OS4yIDc2OCAyNzIgNzUyIDI3MnoiIGZpbGw9IiNEQUU5RkYiIHAtaWQ9IjU0MDQzIj48L3BhdGg+PHBhdGggZD0iTTc0OCAyNjMuMkg0NDYuNGMtMTYuOCAwLTMwLjQtMTMuNi0zMC40LTMwLjR2LTI5LjZjMC0xNi44IDEzLjYtMzAuNCAzMC40LTMwLjRoMzAxLjZjMTYuOCAwIDMwLjQgMTMuNiAzMC40IDMwLjR2MjkuNmMtMC44IDE2LjgtMTMuNiAzMC40LTMwLjQgMzAuNHoiIGZpbGw9IiNGRkZGRkYiIHAtaWQ9IjU0MDQ0Ij48L3BhdGg+PHBhdGggZD0iTTc1MiA0NzkuMkg0NTJjLTE2LjggMC0zMC40LTEzLjYtMzAuNC0zMC40di0yOGMwLTE2LjggMTMuNi0zMC40IDMwLjQtMzAuNEg3NTJjMTYuOCAwIDMwLjQgMTMuNiAzMC40IDMwLjR2MjhjLTAuOCAxNi44LTE0LjQgMzAuNC0zMC40IDMwLjR6IiBmaWxsPSIjREFFOUZGIiBwLWlkPSI1NDA0NSI+PC9wYXRoPjxwYXRoIGQ9Ik03NDIuNCA0NjguOGgtMjk2Yy0xNi44IDAtMzAuNC0xMy42LTMwLjQtMzAuNHYtMjhjMC0xNi44IDEzLjYtMzAuNCAzMC40LTMwLjRoMjk2LjhjMTYuOCAwIDMwLjQgMTMuNiAzMC40IDMwLjR2MjhjLTAuOCAxNi44LTE0LjQgMzAuNC0zMS4yIDMwLjR6IiBmaWxsPSIjRkZGRkZGIiBwLWlkPSI1NDA0NiI+PC9wYXRoPjxwYXRoIGQ9Ik03NTIgNjg1LjZINDUyYy0xNi44IDAtMzAuNC0xMy42LTMwLjQtMzAuNHYtMjhjMC0xNi44IDEzLjYtMzAuNCAzMC40LTMwLjRINzUyYzE2LjggMCAzMC40IDEzLjYgMzAuNCAzMC40djI4Yy0wLjggMTYuOC0xNC40IDMwLjQtMzAuNCAzMC40eiIgZmlsbD0iI0RBRTlGRiIgcC1pZD0iNTQwNDciPjwvcGF0aD48cGF0aCBkPSJNNzQyLjQgNjc1LjJoLTI5NmMtMTYuOCAwLTMwLjQtMTMuNi0zMC40LTMwLjR2LTI4YzAtMTYuOCAxMy42LTMwLjQgMzAuNC0zMC40aDI5Ni44YzE2LjggMCAzMC40IDEzLjYgMzAuNCAzMC40djI4Yy0wLjggMTYuOC0xNC40IDMwLjQtMzEuMiAzMC40eiIgZmlsbD0iI0ZGRkZGRiIgcC1pZD0iNTQwNDgiPjwvcGF0aD48cGF0aCBkPSJNMzAyLjQgMjcyaC0zNC40Yy0xMy42IDAtMjQuOC0xMS4yLTI0LjgtMjQuOHYtMzguNGMwLTEzLjYgMTEuMi0yNC44IDI0LjgtMjQuOGgzNC40YzEzLjYgMCAyNC44IDExLjIgMjQuOCAyNC44djM4LjRjMCAxMy42LTExLjIgMjQuOC0yNC44IDI0Ljh6IiBmaWxsPSIjREFFOUZGIiBwLWlkPSI1NDA0OSI+PC9wYXRoPjxwYXRoIGQ9Ik0zMDEuNiAyNjMuMmgtMzQuNGMtMTMuNiAwLTI0LjgtMTEuMi0yNC44LTI0Ljh2LTQwYzAtMTMuNiAxMS4yLTI0LjggMjQuOC0yNC44aDM0LjRjMTMuNiAwIDI0LjggMTEuMiAyNC44IDI0Ljh2NDBjMCAxMy42LTExLjIgMjQuOC0yNC44IDI0Ljh6IiBmaWxsPSIjRkZGRkZGIiBwLWlkPSI1NDA1MCI+PC9wYXRoPjxwYXRoIGQ9Ik0zMDIuNCA0NzkuMmgtMzQuNGMtMTMuNiAwLTI0LjgtMTEuMi0yNC44LTI0LjhWNDE2YzAtMTMuNiAxMS4yLTI0LjggMjQuOC0yNC44aDM0LjRjMTMuNiAwIDI0LjggMTEuMiAyNC44IDI0Ljh2MzguNGMwIDEzLjYtMTEuMiAyNC44LTI0LjggMjQuOHoiIGZpbGw9IiNEQUU5RkYiIHAtaWQ9IjU0MDUxIj48L3BhdGg+PHBhdGggZD0iTTMwMC44IDQ2OC44aC0zMy42Yy0xMy42IDAtMjQuOC0xMS4yLTI0LjgtMjQuOHYtMzkuMmMwLTEzLjYgMTEuMi0yNC44IDI0LjgtMjQuOGgzMy42YzEzLjYgMCAyNC44IDExLjIgMjQuOCAyNC44djM5LjJjMCAxMy42LTExLjIgMjQuOC0yNC44IDI0Ljh6IiBmaWxsPSIjRkZGRkZGIiBwLWlkPSI1NDA1MiI+PC9wYXRoPjxwYXRoIGQ9Ik0zMDIuNCA2ODUuNmgtMzQuNGMtMTMuNiAwLTI0LjgtMTEuMi0yNC44LTI0Ljh2LTM4LjRjMC0xMy42IDExLjItMjQuOCAyNC44LTI0LjhoMzQuNGMxMy42IDAgMjQuOCAxMS4yIDI0LjggMjQuOHYzOC40YzAgMTMuNi0xMS4yIDI0LjgtMjQuOCAyNC44eiIgZmlsbD0iI0RBRTlGRiIgcC1pZD0iNTQwNTMiPjwvcGF0aD48cGF0aCBkPSJNMzAwLjggNjc1LjJoLTMzLjZjLTEzLjYgMC0yNC44LTExLjItMjQuOC0yNC44di0zOS4yYzAtMTMuNiAxMS4yLTI0LjggMjQuOC0yNC44aDMzLjZjMTMuNiAwIDI0LjggMTEuMiAyNC44IDI0Ljh2MzkuMmMwIDEzLjYtMTEuMiAyNC44LTI0LjggMjQuOHoiIGZpbGw9IiNGRkZGRkYiIHAtaWQ9IjU0MDU0Ij48L3BhdGg+PC9zdmc+" type="image/svg+xml">
+    <title>用户知情同意书</title>
+    <style>
+        /* 基础样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* 主内容区样式 */
+        .consent-container {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            position: relative; /* 新增：为按钮绝对定位提供参考 */
+            padding-bottom: 6rem; /* 新增：底部留出空间放置按钮 */
+        }
+
+        .consent-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #1e293b;
+            text-align: center;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #3b82f6;
+        }
+
+        .consent-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .consent-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: #3b82f6;
+        }
+
+        .consent-section p {
+            margin-bottom: 1rem;
+            color: #475569;
+        }
+
+        .consent-section ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: #475569;
+        }
+
+        .consent-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* 同意区域样式 */
+        .agreement-area {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        #consentCheckbox {
+            margin-top: 0.3rem;
+            margin-right: 0.8rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            accent-color: #3b82f6;
+        }
+
+        .checkbox-label {
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        /* 按钮样式 - 修改部分 */
+        .btn-container {
+            position: absolute;
+            right: 2rem;
+            bottom: 2rem;
+        }
+        
+        .btn-publish {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            color: white;
+            background-color: #3b82f6;
+            box-shadow: 0 2px 4px rgba(59, 130, 246, 0.1);
+            min-width: 120px;
+        }
+
+        .btn-publish:disabled {
+            background-color: #94a3b8;
+            cursor: not-allowed;
+            box-shadow: none;
+            transform: none;
+        }
+
+        .btn-publish:hover:not(:disabled) {
+            background-color: #2563eb;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+            transform: translateY(-1px);
+        }
+
+        /* 页脚样式 */
+        footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 2rem 0 1rem;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            color: #bfdbfe;
+        }
+
+        .footer-column p {
+            color: #94a3b8;
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-links i {
+            margin-right: 0.5rem;
+            width: 1rem;
+            text-align: center;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1rem;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 0.8rem;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem 0.5rem;
+            }
+
+            .consent-container {
+                padding: 1.5rem;
+                padding-bottom: 5rem; /* 调整移动设备底部空间 */
+            }
+
+            .consent-title {
+                font-size: 1.5rem;
+            }
+
+            .consent-section h3 {
+                font-size: 1.1rem;
+            }
+
+            .btn-container {
+                right: 1.5rem;
+                bottom: 1.5rem;
+            }
+            
+            .btn-publish {
+                padding: 0.6rem 1.2rem;
+                min-width: auto;
+                font-size: 0.9rem;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+            }
+
+            .consent-container {
+                padding: 1rem;
+                padding-bottom: 5rem; /* 调整小屏幕底部空间 */
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .btn-container {
+                right: 1rem;
+                bottom: 1rem;
+                width: calc(100% - 2rem); /* 小屏幕按钮占满宽度 */
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4992252_gsy8zy8bs5a.css">
+</head>
+<body>
+    <main class="main-content">
+        <div class="container">
+            <div class="consent-container">
+                <h1 class="consent-title">用户知情同意书</h1>
+
+                <div class="consent-section">
+                    <h3>一、总则</h3>
+                    <p>欢迎使用ColorArea（以下简称"本平台"）。在使用本平台前，请您仔细阅读并理解本知情同意书。您勾选"我已阅读并同意"即表示您已充分理解并同意本协议的全部内容。如您不同意本协议，请勿使用本平台服务。</p>
+                    <p>本平台是创建于2025/8/3（因域名简称ColorArea，没有官方称谓，与其服务无关）请知悉。</p>
+                </div>
+
+                <div class="consent-section">
+                    <h3>二、信息收集与使用</h3>
+                    <p>为了向您提供更好的服务，本平台可能收集以下信息：</p>
+                    <ul>
+                        <li>您在主动发布的内容</li>
+                        <li>基本设备信息，如IP地址、浏览器类型</li>
+                        <li>您在使用过程中主动提供的其他信息</li>
+                        <li>Cookies等。</li>
+                    </ul>
+                    <p>一般情况下，本平台不会刻意对您信息进行记录</p>
+                </div>
+
+                <div class="consent-section">
+                    <h3>三、信息保护与披露</h3>
+                    <p>我们尽可能采取合理的安全措施保护您的个人信息，不会向第三方披露您的个人信息。</p>
+                </div>
+
+                <div class="consent-section">
+                    <h3>四、协议变更</h3>
+                    <p>本知情同意书可能会根据平台运营需要进行调整。如有重大变更，我们将通过适当方式通知您。您继续使用本平台服务即视为同意变更后的内容。</p>
+                </div>
+                <div class="consent-section">
+                    <h3>五、问题反馈</h3>
+                    <p>此平台由开发者一人开发，问题反馈可能得不到及时解决，请见谅！</p>
+                <div class="agreement-area">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="consentCheckbox">
+                        <label for="consentCheckbox" class="checkbox-label">
+                            我已仔细阅读并同意上述内容。
+                        </label>
+                    </div>
+
+                    <!-- 按钮容器 - 新增 -->
+                    <div class="btn-container">
+                        <button id="agreeBtn" class="btn-publish" disabled>
+                            <i class="fa fa-check"></i>同意并继续
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>关于ColorArea</h3>
+                    <p>这是干什么的？作者也不知道</p>
+                </div>
+                <div class="footer-column">
+                    <h3>快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                        <li><a href="/posts"><i class="fa fa-list"></i>所有文章</a></li>
+                        <li><a href="/about"><i class="fa fa-user"></i>关于我</a></li>
+                        <li><a href="/contact"><i class="fa fa-envelope"></i>联系我</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>联系我</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:pjy1548@outlook.com"><i class="iconfont icon-email"></i> Email</a></li>
+                        <li><a href="https://github.com/PJY1548"><i class="iconfont icon-GitHub"></i> GitHub</a></li>
+                        <li><a href="https://space.bilibili.com/1475051332"><i class="iconfont icon-bilibili"></i> Bilibili</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 color.cloudns.be - 保留所有权利</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 复选框和按钮交互
+        const consentCheckbox = document.getElementById('consentCheckbox');
+        const agreeBtn = document.getElementById('agreeBtn');
+
+        consentCheckbox.addEventListener('change', function() {
+            agreeBtn.disabled = !this.checked;
+        });
+
+        agreeBtn.addEventListener('click', function() {
+            if (consentCheckbox.checked) {
+                // 存储用户已同意的状态（永久有效，除非清除浏览器数据）
+                localStorage.setItem('agreed', 'true');
+                // 跳转到首页
+                window.location.href = '/';
+            }
+        });
+    </script>
+</body>
+</html>

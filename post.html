@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <script>
+  // 页面加载时检查用户是否已同意协议
+  window.addEventListener('DOMContentLoaded', function() {
+    // 检查localStorage中是否有"agreed"标记
+    const hasAgreed = localStorage.getItem('agreed');
+    
+    // 如果未同意，则跳转到知情同意书页面
+    if (!hasAgreed) {
+      window.location.href = '/cert.html';
+    }
+  });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="noindex, nofollow">
+    <title>文章详情 - ColorArea</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4992252_gsy8zy8bs5a.css">
+    <link rel="icon" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNzU4NDQ1ODI1NTUwIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjU0MDM5IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiPjxwYXRoIGQ9Ik00OCA4NzMuNmE0NjQgMTIxLjYgMCAxIDAgOTI4IDAgNDY0IDEyMS42IDAgMSAwLTkyOCAwWiIgZmlsbD0iI0RBRTlGRiIgcC1pZD0iNTQwNDAiPjwvcGF0aD48cGF0aCBkPSJNNzg0IDg1My42SDI0MGMtNTIuOCAwLTk2LTQzLjItOTYtOTZWMjEyLjhjMC01Mi44IDQzLjItOTYgOTYtOTZoNTQ0YzUyLjggMCA5NiA0My4yIDk2IDk2djU0NC44YzAgNTIuOC00My4yIDk2LTk2IDk2eiIgZmlsbD0iIzFEODVEQiIgcC1pZD0iNTQwNDEiPjwvcGF0aD48cGF0aCBkPSJNNzg0IDgyMC44SDI0MGMtNTIuOCAwLTk2LTQzLjItOTYtOTZWMTM0LjRjMC01Mi44IDQzLjItOTYgOTYtOTZoNTQ0YzUyLjggMCA5NiA0My4yIDk2IDk2djU4OS42YzAgNTMuNi00My4yIDk2LjgtOTYgOTYuOHoiIGZpbGw9IiM0NTlERjUiIHAtaWQ9IjU0MDQyIj48L3BhdGg+PHBhdGggZD0iTTc1MiAyNzJINDUyYy0xNi44IDAtMzAuNC0xMy42LTMwLjQtMzAuNHYtMjhjMC0xNi44IDEzLjYtMzAuNCAzMC40LTMwLjRINzUyYzE2LjggMCAzMC40IDEzLjYgMzAuNCAzMC40djI4Qzc4MS42IDI1OS4yIDc2OCAyNzIgNzUyIDI3MnoiIGZpbGw9IiNEQUU5RkYiIHAtaWQ9IjU0MDQzIj48L3BhdGg+PHBhdGggZD0iTTc0OCAyNjMuMkg0NDYuNGMtMTYuOCAwLTMwLjQtMTMuNi0zMC40LTMwLjR2LTI5LjZjMC0xNi44IDEzLjYtMzAuNCAzMC40LTMwLjRoMzAxLjZjMTYuOCAwIDMwLjQgMTMuNiAzMC40IDMwLjR2MjkuNmMtMC44IDE2LjgtMTMuNiAzMC40LTMwLjQgMzAuNHoiIGZpbGw9IiNGRkZGRkYiIHAtaWQ9IjU0MDQ0Ij48L3BhdGg+PHBhdGggZD0iTTc1MiA0NzkuMkg0NTJjLTE2LjggMC0zMC40LTEzLjYtMzAuNC0zMC40di0yOGMwLTE2LjggMTMuNi0zMC40IDMwLjQtMzAuNEg3NTJjMTYuOCAwIDMwLjQgMTMuNiAzMC40IDMwLjR2MjhjLTAuOCAxNi44LTE0LjQgMzAuNC0zMC40IDMwLjR6IiBmaWxsPSIjREFFOUZGIiBwLWlkPSI1NDA0NSI+PC9wYXRoPjxwYXRoIGQ9Ik03NDIuNCA0NjguOGgtMjk2Yy0xNi44IDAtMzAuNC0xMy42LTMwLjQtMzAuNHYtMjhjMC0xNi44IDEzLjYtMzAuNCAzMC40LTMwLjRoMjk2LjhjMTYuOCAwIDMwLjQgMTMuNiAzMC40IDMwLjR2MjhjLTAuOCAxNi44LTE0LjQgMzAuNC0zMS4yIDMwLjR6IiBmaWxsPSIjRkZGRkZGIiBwLWlkPSI1NDA0NiI+PC9wYXRoPjxwYXRoIGQ9Ik03NTIgNjg1LjZINDUyYy0xNi44IDAtMzAuNC0xMy42LTMwLjQtMzAuNHYtMjhjMC0xNi44IDEzLjYtMzAuNCAzMC40LTMwLjRINzUyYzE2LjggMCAzMC40IDEzLjYgMzAuNCAzMC40djI4Yy0wLjggMTYuOC0xNC40IDMwLjQtMzAuNCAzMC40eiIgZmlsbD0iI0RBRTlGRiIgcC1pZD0iNTQwNDciPjwvcGF0aD48cGF0aCBkPSJNNzQyLjQgNjc1LjJoLTI5NmMtMTYuOCAwLTMwLjQtMTMuNi0zMC40LTMwLjR2LTI4YzAtMTYuOCAxMy42LTMwLjQgMzAuNC0zMC40aDI5Ni44YzE2LjggMCAzMC40IDEzLjYgMzAuNCAzMC40djI4Yy0wLjggMTYuOC0xNC40IDMwLjQtMzEuMiAzMC40eiIgZmlsbD0iI0ZGRkZGRiIgcC1pZD0iNTQwNDgiPjwvcGF0aD48cGF0aCBkPSJNMzAyLjQgMjcyaC0zNC40Yy0xMy42IDAtMjQuOC0xMS4yLTI0LjgtMjQuOHYtMzguNGMwLTEzLjYgMTEuMi0yNC44IDI0LjgtMjQuOGgzNC40YzEzLjYgMCAyNC44IDExLjIgMjQuOCAyNC44djM4LjRjMCAxMy42LTExLjIgMjQuOC0yNC44IDI0Ljh6IiBmaWxsPSIjREFFOUZGIiBwLWlkPSI1NDA0OSI+PC9wYXRoPjxwYXRoIGQ9Ik0zMDEuNiAyNjMuMmgtMzQuNGMtMTMuNiAwLTI0LjgtMTEuMi0yNC44LTI0Ljh2LTQwYzAtMTMuNiAxMS4yLTI0LjggMjQuOC0yNC44aDM0LjRjMTMuNiAwIDI0LjggMTEuMiAyNC44IDI0Ljh2NDBjMCAxMy42LTExLjIgMjQuOC0yNC44IDI0Ljh6IiBmaWxsPSIjRkZGRkZGIiBwLWlkPSI1NDA1MCI+PC9wYXRoPjxwYXRoIGQ9Ik0zMDIuNCA0NzkuMmgtMzQuNGMtMTMuNiAwLTI0LjgtMTEuMi0yNC44LTI0LjhWNDE2YzAtMTMuNiAxMS4yLTI0LjggMjQuOC0yNC44aDM0LjRjMTMuNiAwIDI0LjggMTEuMiAyNC44IDI0Ljh2MzguNGMwIDEzLjYtMTEuMiAyNC44LTI0LjggMjQuOHoiIGZpbGw9IiNEQUU5RkYiIHAtaWQ9IjU0MDUxIj48L3BhdGg+PHBhdGggZD0iTTMwMC44IDQ2OC44aC0zMy42Yy0xMy42IDAtMjQuOC0xMS4yLTI0LjgtMjQuOHYtMzkuMmMwLTEzLjYgMTEuMi0yNC44IDI0LjgtMjQuOGgzMy42YzEzLjYgMCAyNC44IDExLjIgMjQuOCAyNC44djM5LjJjMCAxMy42LTExLjIgMjQuOC0yNC44IDI0Ljh6IiBmaWxsPSIjRkZGRkZGIiBwLWlkPSI1NDA1MiI+PC9wYXRoPjxwYXRoIGQ9Ik0zMDIuNCA2ODUuNmgtMzQuNGMtMTMuNiAwLTI0LjgtMTEuMi0yNC44LTI0Ljh2LTM4LjRjMC0xMy42IDExLjItMjQuOCAyNC44LTI0LjhoMzQuNGMxMy42IDAgMjQuOCAxMS4yIDI0LjggMjQuOHYzOC40YzAgMTMuNi0xMS4yIDI0LjgtMjQuOCAyNC44eiIgZmlsbD0iI0RBRTlGRiIgcC1pZD0iNTQwNTMiPjwvcGF0aD48cGF0aCBkPSJNMzAwLjggNjc1LjJoLTMzLjZjLTEzLjYgMC0yNC44LTExLjItMjQuOC0yNC44di0zOS4yYzAtMTMuNiAxMS4yLTI0LjggMjQuOC0yNC44aDMzLjZjMTMuNiAwIDI0LjggMTEuMiAyNC44IDI0Ljh2MzkuMmMwIDEzLjYtMTEuMiAyNC44LTI0LjggMjQuOHoiIGZpbGw9IiNGRkZGRkYiIHAtaWQ9IjU0MDU0Ij48L3BhdGg+PC9zdmc+" type="image/svg+xml">
+    <style>
+        /* 基础样式重置 - 与about.html一致 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* 导航栏样式 - 与about.html一致 */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #3b82f6;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo i {
+            font-size: 1.5rem;
+        }
+
+        .logo span {
+            margin-left: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 500;
+            transition: color 0.2s ease;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #3b82f6;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a.active {
+            color: #3b82f6;
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* 发布文章按钮样式 - 与about.html一致 */
+        .btn-publish {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            color: white;
+            background-color: #3b82f6;
+            box-shadow: 0 2px 4px rgba(59, 130, 246, 0.1);
+        }
+
+        .btn-publish:hover {
+            background-color: #2563eb;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .btn-publish:active {
+            transform: translateY(1px);
+        }
+
+        .btn-publish i {
+            margin-right: 0.5rem;
+            font-size: 1rem;
+        }
+
+        /* 按钮通用样式 */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        /* 删除按钮样式 */
+        .delete-btn {
+            background: #ef4444;
+            color: white;
+            box-shadow: 0 2px 4px rgba(239, 68, 68, 0.1);
+        }
+
+        .delete-btn:hover {
+            background: #dc2626;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .delete-btn:active {
+            transform: translateY(1px);
+        }
+
+        .delete-btn i {
+            margin-right: 0.5rem;
+            font-size: 1rem;
+        }
+
+        /* 移动端菜单样式 - 与about.html一致 */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #475569;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu-btn:hover {
+            transform: rotate(90deg);
+        }
+
+        /* 移动端菜单容器 */
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            z-index: 100;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        /* 菜单内容容器 */
+        .mobile-menu-content {
+            padding: 1rem;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        /* 激活状态 */
+        .mobile-menu.active {
+            max-height: 300px;
+            transition: max-height 0.5s ease-in;
+        }
+
+        .mobile-menu a {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 0;
+            text-decoration: none;
+            color: #475569;
+            border-bottom: 1px solid #f1f5f9;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-menu a:hover {
+            color: #3b82f6;
+            padding-left: 8px;
+        }
+
+        /* 主内容区样式 - 与about.html风格统一 */
+        .main-content {
+            padding: 3.5rem 0;
+            flex: 1;
+        }
+
+        .form-page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .form-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: #1e293b;
+        }
+
+        .form-card {
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            padding: 1.8rem;
+        }
+
+        /* 文章详情样式 - 调整为与about.html风格一致 */
+        .post-card {
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            overflow: hidden;
+            word-wrap: break-word;  
+            overflow-wrap: break-word;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .post-card:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .post-title {
+            font-size: 1.8rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .post-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #3b82f6;
+            border-radius: 3px;
+        }
+
+        .post-meta {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 1.8rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .post-content {
+            color: #1e293b;
+            font-size: 1rem;
+            white-space: pre-wrap;  
+            line-height: 1.8;
+        }
+
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .post-content img:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .action-bar {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2.5rem;
+            gap: 1rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            color: #3b82f6;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+            transform: translateX(-2px);
+        }
+
+        .loading, .error {
+            text-align: center;
+            padding: 4rem 0;
+            color: #64748b;
+        }
+
+        .error {
+            color: #ef4444;
+        }
+
+        /* 评论区样式 */
+        .comments-section {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .comments-title {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #1e293b;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+        
+        .comments-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #3b82f6;
+            border-radius: 3px;
+        }
+        
+        .comment-form {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 1.8rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .comment-form h4, .comments-list h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            color: #334155;
+        }
+        
+        .comments-list {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .comment-item {
+            padding: 1.2rem 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        
+        .comment-item:last-child {
+            border-bottom: none;
+        }
+        
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .comment-author {
+            font-weight: 600;
+            color: #1e293b;
+        }
+        
+        .comment-date {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+        
+        .comment-content {
+            color: #334155;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .no-comments {
+            text-align: center;
+            padding: 2rem 0;
+            color: #64748b;
+            border: 1px dashed #e2e8f0;
+            border-radius: 0.5rem;
+        }
+
+        /* 评论操作按钮样式 */
+        .comment-actions {
+            margin-top: 0.5rem;
+        }
+
+        .comment-delete-btn {
+            background: none;
+            border: none;
+            color: #ef4444;
+            cursor: pointer;
+            font-size: 0.85rem;
+            padding: 0.2rem 0;
+            display: flex;
+            align-items: center;
+            transition: color 0.2s ease;
+        }
+
+        .comment-delete-btn:hover {
+            color: #dc2626;
+        }
+
+        .comment-delete-btn i {
+            margin-right: 0.3rem;
+            font-size: 0.9rem;
+        }
+
+        /* 表单元素样式补充 */
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #475569;
+            font-weight: 500;
+        }
+        
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-hint {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+        
+        .error-message {
+            margin-top: 0.8rem;
+            color: #ef4444;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        /* 页脚样式 - 与about.html完全一致 */
+        footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 3.5rem 0 1.5rem;
+            margin-top: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #2563eb);
+        }
+
+        footer::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            color: #bfdbfe;
+            position: relative;
+            padding-bottom: 0.7rem;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #3b82f6;
+        }
+
+        .footer-column p {
+            color: #94a3b8;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.2s ease, padding-left 0.3s ease;
+            font-size: 0.95rem;
+            display: inline-block;
+            padding-left: 0;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .footer-links a i {
+            margin-right: 0.5rem;
+            color: #3b82f6;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 0.85rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 响应式调整 - 与about.html一致 */
+        @media (min-width: 769px) {
+            /* 桌面端发布按钮保持固定尺寸 */
+            .btn-publish, .delete-btn {
+                min-width: 120px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-post .post-image {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                height: 60px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            /* 移动端菜单 */
+            .mobile-menu {
+                top: 60px;
+            }
+            
+            /* 移动端发布按钮 */
+            .mobile-menu .btn-publish {
+                width: 100%;
+                margin: 0.5rem auto 0;
+                padding: 0.7rem 1.5rem;
+                font-size: 0.95rem;
+                justify-content: center;
+                box-sizing: border-box;
+                display: flex;
+            }
+
+            .posts-search-container {
+                max-width: 100%;
+                margin-top: 0.5rem;
+            }
+
+            .posts-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                order: -1;
+            }
+
+            .sidebar-card {
+                padding: 1.2rem;
+            }
+
+            .btn-publish, .delete-btn {
+                padding: 0.6rem 1.2rem;
+                min-width: auto;
+                font-size: 0.9rem;
+            }
+
+            .post-title {
+                font-size: 1.6rem;
+            }
+            
+            .main-content {
+                padding: 2rem 0;
+            }
+            
+            .form-title {
+                font-size: 1.6rem;
+            }
+            
+            .form-card, .post-card {
+                padding: 1.6rem;
+            }
+
+            .action-bar {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
+            .delete-btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 3rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                padding: 0 1rem;
+            }
+            
+            .btn-publish, .btn-outline, .delete-btn {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .container {
+                width: 95%;
+                padding: 0 0.5rem;
+            }
+
+            .posts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .post-card {
+                padding: 1.2rem;
+            }
+
+            .featured-post .post-title {
+                font-size: 1.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 - 与about.html一致 -->
+    <header id="mainHeader">
+        <div class="container">
+            <nav>
+                <a href="/" class="logo">
+                    <i class="fa fa-pencil-square-o"></i>
+                    <span>ColorArea</span>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/posts" class="active">所有文章</a></li>
+                    <li><a href="/about">关于开发者</a></li>
+                    <li>
+                        <a href="/new-post" class="btn-publish">
+                            <i class="fa fa-plus"></i>发布文章
+                        </a>
+                    </li>
+                </ul>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </nav>
+            
+            <!-- 移动端菜单 - 与about.html一致 -->
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-content">
+                    <a href="/">首页</a>
+                    <a href="/posts" class="active">所有文章</a>
+                    <a href="/about">关于开发者</a>
+                    <a href="/new-post" class="btn-publish">
+                        <i class="fa fa-plus"></i>发布文章
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <section class="main-content">
+        <div class="form-page">
+            <div id="post-content">
+                <div class="loading">
+                    <i class="fa fa-spinner fa-spin fa-2x"></i>
+                    <p style="margin-top: 0.8rem;">加载文章中...</p>
+                </div>
+            </div>
+
+            <!-- 评论区 -->
+            <div class="comments-section">
+                <h3 class="comments-title">评论区</h3>
+                
+                <!-- 评论表单 -->
+                <div class="comment-form">
+                    <h4>发表评论</h4>
+                    <div class="form-group">
+                        <label for="author" class="form-label">昵称 *</label>
+                        <input type="text" id="author" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">邮箱 (可选)</label>
+                        <input type="email" id="email" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-content" class="form-label">评论内容 *</label>
+                        <textarea id="comment-content" class="form-textarea" required></textarea>
+                    </div>
+                    <!-- 添加删除密码输入 -->
+                    <div class="form-group">
+                        <label for="comment-password" class="form-label">删除密码 *</label>
+                        <input type="password" id="comment-password" class="form-input" placeholder="请输入删除密码" required minlength="4">
+                        <div class="form-hint">用于后续删除评论，请牢记</div>
+                    </div>
+                    <button id="submit-comment" class="btn btn-publish">
+                        <i class="fa fa-paper-plane"></i> 提交评论
+                    </button>
+                    <div id="comment-message" class="error-message"></div>
+                </div>
+                
+                <!-- 评论列表 -->
+                <div class="comments-list">
+                    <h4>评论列表 (<span id="comments-count">0</span>)</h4>
+                    <div id="comments-container"></div>
+                    <div id="no-comments" class="no-comments">暂无评论，快来发表第一条评论吧！</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 - 与about.html完全一致 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>关于ColorArea</h3>
+                    <p>这是干什么的？作者也不知道</p>
+                </div>
+                <div class="footer-column">
+                    <h3>快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                        <li><a href="/posts"><i class="fa fa-list"></i>所有文章</a></li>
+                        <li><a href="/about"><i class="fa fa-user"></i>关于我</a></li>
+                        <li><a href="/contact"><i class="fa fa-envelope"></i>联系我</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>联系我</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:pjy1548@outlook.com"><i class="iconfont icon-email"></i> Email</a></li>
+                        <li><a href="https://github.com/PJY1548"><i class="iconfont icon-GitHub"></i> GitHub</a></li>
+                        <li><a href="https://space.bilibili.com/1475051332"><i class="iconfont icon-bilibili"></i> Bilibili</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 color.cloudns.be - 保留所有权利</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换 - 与about.html一致
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // 滚动效果 - 导航栏变化 - 与about.html一致
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        function formatTime(dateString) {
+        return new Date(dateString).toLocaleDateString('zh-CN');
+        }
+        // 删除文章
+        async function deletePost(postId) {
+            if (!confirm('确定要删除这篇文章吗？此操作不可恢复。')) {
+                return;
+            }
+
+            const deletePassword = prompt('请输入文章删除密码：');
+            if (!deletePassword) {
+                alert('请输入删除密码');
+                return;
+            }
+
+            try {
+                const response = await fetch(`/api/posts/${postId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ deletePassword })
+                });
+
+                const result = await response.json();
+
+                if (!response.ok || !result.success) {
+                    throw new Error(result.message || '删除失败');
+                }
+
+                // 删除成功后跳转
+                window.location.href = '/posts';
+            } catch (error) {
+                alert(error.message);
+            }
+        }
+
+        // 删除评论
+        async function deleteComment(commentId) {
+            if (!confirm('确定要删除这条评论吗？此操作不可恢复。')) {
+                return;
+            }
+
+            const deletePassword = prompt('请输入评论删除密码：');
+            if (!deletePassword) {
+                alert('请输入删除密码');
+                return;
+            }
+
+            try {
+                const response = await fetch(`/api/comments/${commentId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ deletePassword })
+                });
+
+                const result = await response.json();
+
+                if (!response.ok || !result.success) {
+                    throw new Error(result.message || '删除失败');
+                }
+
+                // 删除成功后重新加载评论
+                loadComments();
+            } catch (error) {
+                alert(error.message);
+            }
+        }
+
+        // 获取并渲染文章
+        async function fetchPost() {
+            // 从URL获取文章ID
+            const pathParts = window.location.pathname.split('/');
+            const postId = pathParts[pathParts.length - 1];
+            
+            if (!postId || isNaN(postId)) {
+                document.getElementById('post-content').innerHTML = `
+                    <div class="error">
+                        <i class="fa fa-exclamation-triangle fa-2x" style="margin-bottom: 0.8rem;"></i>
+                        <p>无效的文章ID</p>
+                        <a href="/posts" class="back-link" style="margin-top: 0.8rem;">返回文章列表</a>
+                    </div>
+                `;
+                return;
+            }
+
+            try {
+                const response = await fetch(`/api/posts/${postId}`);
+                
+                if (!response.ok) {
+                    if (response.status === 404) {
+                        throw new Error('文章不存在或已被删除');
+                    }
+                    throw new Error('加载文章失败');
+                }
+
+                const result = await response.json();
+                
+                if (!result.success || !result.data) {
+                    throw new Error('文章数据异常');
+                }
+                
+                renderPost(result.data);
+            } catch (err) {
+                document.getElementById('post-content').innerHTML = `
+                    <div class="error">
+                        <i class="fa fa-exclamation-triangle fa-2x" style="margin-bottom: 0.8rem;"></i>
+                        <p>${err.message}</p>
+                        <a href="/posts" class="back-link" style="margin-top: 0.8rem;">返回文章列表</a>
+                    </div>
+                `;
+            }
+        }
+
+        // 渲染文章内容
+        function renderPost(post) {
+            const contentEl = document.getElementById('post-content');
+            contentEl.innerHTML = `
+                <article class="post-card">
+                    <h1 class="post-title">${post.title}</h1>
+                    <div class="post-meta">
+                        <span>分类：${post.category}</span>
+                        <span>发布时间：${formatTime(post.updated_at)}</span>
+                    </div>
+                    <div class="post-content">${post.content}</div>
+                    <div class="action-bar">
+                        <button class="btn delete-btn" onclick="deletePost(${post.id})">
+                            <i class="fa fa-trash"></i> 删除文章
+                        </button>
+                    </div>
+                    <a href="/posts" class="back-link">
+                        <i class="fa fa-arrow-left"></i> 返回文章列表
+                    </a>
+                </article>
+            `;
+        }
+
+        // 评论功能相关脚本
+        // 获取当前文章ID
+        const getPostId = () => {
+            const path = window.location.pathname;
+            const match = path.match(/\/post\/(\d+)/);
+            return match ? match[1] : null;
+        };
+        
+        const postId = getPostId();
+        
+        // 加载评论
+        const loadComments = async () => {
+            if (!postId) return;
+            
+            try {
+                const response = await fetch(`/api/posts/${postId}/comments`);
+                const data = await response.json();
+                
+                if (data.success && data.data) {
+                    const commentsContainer = document.getElementById('comments-container');
+                    const commentsCount = document.getElementById('comments-count');
+                    const noComments = document.getElementById('no-comments');
+                    
+                    commentsCount.textContent = data.data.length;
+                    
+                    if (data.data.length === 0) {
+                        noComments.style.display = 'block';
+                        commentsContainer.innerHTML = '';
+                        return;
+                    }
+                    
+                    noComments.style.display = 'none';
+                    commentsContainer.innerHTML = '';
+                    
+                    data.data.forEach(comment => {
+                        const commentElement = document.createElement('div');
+                        commentElement.className = 'comment-item';
+                        
+                        // 格式化日期
+                        const date = new Date(comment.created_at);
+                        const formattedDate = date.toLocaleString();
+                        
+                        commentElement.innerHTML = `
+                            <div class="comment-header">
+                                <span class="comment-author">${comment.author}</span>
+                                <span class="comment-date">${formattedDate}</span>
+                            </div>
+                            <div class="comment-content">${comment.content}</div>
+                            <div class="comment-actions">
+                                <button class="comment-delete-btn" onclick="deleteComment(${comment.id})">
+                                    <i class="fa fa-trash-o"></i> 删除评论
+                                </button>
+                            </div>
+                        `;
+                        
+                        commentsContainer.appendChild(commentElement);
+                    });
+                }
+            } catch (error) {
+                console.error('加载评论失败:', error);
+            }
+        };
+        
+        // 提交评论
+        const submitComment = async () => {
+            if (!postId) return;
+            
+            const author = document.getElementById('author').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const content = document.getElementById('comment-content').value.trim();
+            const delete_password = document.getElementById('comment-password').value.trim(); // 获取密码
+            const messageElement = document.getElementById('comment-message');
+            
+            // 验证（添加密码验证）
+            if (!author || !content || !delete_password) {
+                messageElement.textContent = '请填写昵称、评论内容和删除密码';
+                messageElement.style.display = 'block';
+                return;
+            }
+            
+            if (delete_password.length < 4) {
+                messageElement.textContent = '删除密码至少需要4位';
+                messageElement.style.display = 'block';
+                return;
+            }
+            
+            try {
+                const response = await fetch(`/api/posts/${postId}/comments`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ author, email, content, delete_password }) // 包含密码
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    // 清空表单（包括密码字段）
+                    document.getElementById('author').value = '';
+                    document.getElementById('email').value = '';
+                    document.getElementById('comment-content').value = '';
+                    document.getElementById('comment-password').value = '';
+                    messageElement.style.display = 'none';
+                    
+                    // 重新加载评论
+                    loadComments();
+                    
+                    // 显示成功消息
+                    messageElement.textContent = '评论成功！';
+                    messageElement.style.color = '#10b981';
+                    messageElement.style.display = 'block';
+                    
+                    // 3秒后隐藏成功消息
+                    setTimeout(() => {
+                        messageElement.style.display = 'none';
+                    }, 3000);
+                } else {
+                    messageElement.textContent = data.message || '评论失败，请重试';
+                    messageElement.style.display = 'block';
+                }
+            } catch (error) {
+                console.error('提交评论失败:', error);
+                messageElement.textContent = '网络错误，请重试';
+                messageElement.style.display = 'block';
+            }
+        };
+
+        // 页面加载时获取文章和评论
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchPost();
+            loadComments();
+            
+            // 提交评论按钮点击事件
+            document.getElementById('submit-comment').addEventListener('click', submitComment);
+            
+            // 评论表单提交事件
+            document.querySelector('.comment-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                submitComment();
+            });
+        });
+    </script>
+</body>
+</html>
